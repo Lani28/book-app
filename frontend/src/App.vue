@@ -11,7 +11,7 @@ import HomeItems from './components/HomeItems.vue'
       <HomeItems msg="BookStopper" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/">Login</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
