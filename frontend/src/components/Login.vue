@@ -54,7 +54,12 @@ function fnLogin(){
           <input type="password" id="password" v-model="password" placeholder="비밀번호를 입력하세요" required />
         </div>
         <button type="submit" class="login-btn">로그인</button>
+        <button class="login-sns" @click="kakaoLogin">
+            <img src="@/assets/kakao_login_medium_wide.png" alt="카카오 로그인">
+        </button>
       </form>
+      <br>
+      <a href="/">회원가입</a>
     </div>
   </div>
 </template>
@@ -127,8 +132,23 @@ function fnLogin(){
   margin-top: 10px;
   transition: background-color 0.2s;
 }
-
 .login-btn:hover {
   background-color: #35495e;
 }
+
+/* sns 로그인 버튼 */
+.login-sns {
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.login-sns img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 </style>

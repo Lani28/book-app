@@ -2,7 +2,7 @@
 </script>
 <template>
   <v-container>
-    <h2>환영합니다.</h2>
+    <h2>환영합니다😊</h2>
     <p class="mt-3">
       <br>
       "읽고 기록하는 나만의 독서 아카이브"<br>

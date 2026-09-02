@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="common.login.mapper.loginMapper">
+    <!--계정 조회-->
+    <select id="memberLoginIdSelect">
+        SELECT
+            meb_seq,
+            member_id,
+            sns_id,
+            sns_type,
+            member_pw,
+            email,
+            nickname,
+            created_at
+        FROM member
+        WHERE 1=1
+        <if test="sns_id != null and sns_id != ''">
+        sns_id=#sns_id# and sns_type=#sns_type#
+        </if>
+        <if test="member_id != null and member_id != ''">
+        member_id=#member_id#
+        </if>
+    </select>
+
+</mapper>
