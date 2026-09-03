@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
     *
     * @return 카카오 인증 페이지
     */
-    @GetMapping("/page")
+    @GetMapping("/kakao")
     public String loginPage() {
         log.info("--------------loginPage 시작--------------");
         String location = "https://kauth.kakao.com/oauth/authorize?response_type=code&client_id="+clientId+"&redirect_uri="+redirectUri;

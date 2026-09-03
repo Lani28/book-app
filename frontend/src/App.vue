@@ -1,10 +1,12 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRoute } from 'vue-router'
 import HomeItems from './components/HomeItems.vue'
+
+const router = useRoute()
 </script>
 
 <template>
-  <header>
+  <header v-if="!router.meta.fullscreen">
     <img alt="메인아이콘로고" class="logo" src="@/assets/free-icon-book.png" width="125" height="125" />
 
     <div class="wrapper">
@@ -16,6 +18,7 @@ import HomeItems from './components/HomeItems.vue'
       </nav>
     </div>
   </header>
+
   <RouterView />
 </template>
 

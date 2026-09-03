@@ -8,6 +8,8 @@
       "읽고 기록하는 나만의 독서 아카이브"<br>
       북스토퍼는 독서생활을 더 유익하게 해줄 독서기록서비스 입니다.
     </p>
+    <br>
+      Copyright © 2026. ~ SBB All Rights Reserved.
   </v-container>
 </template>
 

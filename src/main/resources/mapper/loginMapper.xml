@@ -18,10 +18,11 @@
         FROM member
         WHERE 1=1
         <if test="sns_id != null and sns_id != ''">
-        sns_id=#sns_id# and sns_type=#sns_type#
+            AND sns_id=#{sns_id}
+            AND sns_type=#{sns_type}
         </if>
         <if test="member_id != null and member_id != ''">
-        member_id=#member_id#
+            AND member_id=#{member_id}
         </if>
     </select>
 

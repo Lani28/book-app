@@ -14,6 +14,7 @@ function fnLoginValidation() {
     return
   }else if(email.value.length > 30) {
     alert('글자수를 초과하였습니다.')
+    return
   }
 
   if (password.value === '') {
@@ -38,6 +39,11 @@ function fnLogin(){
     console.log(error)
   })
 }
+
+//카카오 로그인
+function kakaoLogin(){
+    window.location.href = 'http://localhost:8080/login/kakao';
+}
 </script>
 
 <template>
@@ -54,10 +60,10 @@ function fnLogin(){
           <input type="password" id="password" v-model="password" placeholder="비밀번호를 입력하세요" required />
         </div>
         <button type="submit" class="login-btn">로그인</button>
+      </form>
         <button class="login-sns" @click="kakaoLogin">
             <img src="@/assets/kakao_login_medium_wide.png" alt="카카오 로그인">
         </button>
-      </form>
       <br>
       <a href="/">회원가입</a>
     </div>
@@ -83,7 +89,6 @@ function fnLogin(){
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-
 .login-card h2 {
   margin-top: 0;
   margin-bottom: 24px;
@@ -95,14 +100,12 @@ function fnLogin(){
 .input-group {
   margin-bottom: 16px;
 }
-
 .input-group label {
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
   color: #555555;
 }
-
 .input-group input {
   width: 100%;
   padding: 12px;
@@ -112,7 +115,6 @@ function fnLogin(){
   font-size: 16px;
   transition: border-color 0.2s;
 }
-
 .input-group input:focus {
   border-color: #42b883;
   outline: none;
