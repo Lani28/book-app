@@ -1,4 +1,4 @@
-package common.login.mapper;
+package com.addreading.mybookapp.common.login.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 
@@ -7,5 +7,5 @@ import org.apache.ibatis.annotations.Mapper;
  * 260902
  */
 @Mapper
-public interface loginMapper {
+public interface LoginMapper {
 }

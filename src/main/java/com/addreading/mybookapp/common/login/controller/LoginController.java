@@ -1,4 +1,4 @@
-package common.login.controller;
+package com.addreading.mybookapp.common.login.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  @Slf4j
  @Controller
  @RequestMapping("/login")
- public class loginController {
+ public class LoginController {
 
     @Value("${kakao.client-id}")
     private String clientId;

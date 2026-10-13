@@ -1,4 +1,4 @@
-package common.login.dto;
+package com.addreading.mybookapp.common.login.dto;
 
 import lombok.Data;
 
@@ -7,7 +7,7 @@ import lombok.Data;
  * 260902
  */
 @Data
-public class loginDto {
+public class LoginDto {
     private String username;
     private String password;
 }

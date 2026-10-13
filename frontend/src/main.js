@@ -11,4 +11,7 @@ app.use(router)
 
 app.mount('#app')
 
-axios.defaults.baseURL = import.meta.env.VITE_API_URL
+//운영서버url
+// axios.defaults.baseURL = import.meta.env.VITE_API_URL_REAL
+//개발서버url
+axios.defaults.baseURL = import.meta.env.VITE_API_URL_DEV

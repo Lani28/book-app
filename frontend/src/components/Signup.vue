@@ -3,12 +3,12 @@ import {ref} from "vue";
 import axios from "axios";
 
 const memberId = ref('')
-const password = ref('')
+const memberPw = ref('')
 const passwordConfirm = ref('')
 
 //유효성 확인
 function fnSignupValidation() {
-  console.log('회원가입 시도:', memberId.value, password.value, passwordConfirm.value);
+  console.log('회원가입 시도:', memberId.value, memberPw.value, passwordConfirm.value);
 
   if (memberId.value === '') {
     alert('아이디를 입력하세요.')
@@ -19,11 +19,11 @@ function fnSignupValidation() {
   }
 
   if (!/^[a-z0-9]{4,20}$/.test(memberId.value)) {
-    alert('아이디는 영문 소문자, 숫자만 사용하여 4~20자로 입력해주세요.')
+    alert('아이디는 영문 소문자, 숫자로만 조합하여 4~20자로 입력해주세요.')
     return
   }
 
-  if (password.value === '') {
+  if (memberPw.value === '') {
     alert('비밀번호를 입력하세요.')
     return
   }else if (passwordConfirm.value === '') {
@@ -31,15 +31,13 @@ function fnSignupValidation() {
     return
   }
 
-  if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]){8,}$/.test(password.value)) {
+  if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/.test(memberPw.value)) {
     alert('비밀번호는 영문 대소문자, 숫자, 특수문자(!@#$%^&*)를 포함하여 8자 이상 입력해주세요.')
     return
   }
 
-  if (password.value != passwordConfirm.value ) {
+  if (memberPw.value != passwordConfirm.value ) {
     alert('비밀번호가 일치하지 않습니다.')
-    console.log(typeof passwordConfirm.value, "확인")
-    console.log(typeof password.value,"비번")
     return
   }
 
@@ -48,9 +46,9 @@ function fnSignupValidation() {
 
 //가입내용 제출
 function fnSignup(){
-  axios.post('/api/login', {
+  axios.post('/signUp/mbrSignUp', {
     memberId: memberId.value,
-    password: password.value
+    memberPw: memberPw.value
   }
   ).then(function(response) {
     alert('회원가입 되었습니다.')
@@ -72,8 +70,8 @@ function fnSignup(){
           <input type="text" id="memberId" v-model="memberId" placeholder="아이디를 입력하세요" required />
         </div>
         <div class="input-group">
-          <label for="password">비밀번호</label>
-          <input type="password" id="password" v-model="password" placeholder="비밀번호를 입력하세요" required />
+          <label for="memberPw">비밀번호</label>
+          <input type="password" id="memberPw" v-model="memberPw" placeholder="비밀번호를 입력하세요" required />
         </div>
         <div class="input-group">
           <label for="passwordConfirm">비밀번호 확인</label>

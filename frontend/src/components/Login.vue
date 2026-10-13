@@ -1,6 +1,7 @@
 <script setup>
 import {ref} from "vue";
 import axios from "axios";
+import Signup from '../components/Signup.vue'
 
 const email = ref('')
 const password = ref('')
@@ -65,7 +66,7 @@ function kakaoLogin(){
             <img src="@/assets/kakao_login_medium_wide.png" alt="카카오 로그인">
         </button>
       <br>
-      <a href="/">회원가입</a>
+      <router-link to="/signup">회원가입</router-link>
     </div>
   </div>
 </template>
