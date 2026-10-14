@@ -17,7 +17,7 @@
     <v-app-bar border="b" class="ps-4" flat>
       <v-app-bar-nav-icon v-if="$vuetify.display.smAndDown" @click="drawer = !drawer" />
 
-      <v-app-bar-title>Application</v-app-bar-title>
+      <v-app-bar-title>DashBoard</v-app-bar-title>
 
       <template #append>
         <v-btn class="text-none me-2" height="48" icon slim>
@@ -49,34 +49,25 @@
 </template>
 
 <script setup>
+import dashboard from '../components/dashboard.vue'
 import { ref } from 'vue'
 
 const drawer = ref(true)
 
 const items = ref([
   {
-    title: 'Dashboard',
+    title: '프로필',
     prependIcon: 'mdi-view-dashboard-outline',
     link: true,
   },
   {
-    title: 'Team',
+    title: '검색',
     prependIcon: 'mdi-account-group',
     link: true,
   },
   {
-    title: 'Projects',
+    title: '에세이',
     prependIcon: 'mdi-briefcase-outline',
-    link: true,
-  },
-  {
-    title: 'Calendar',
-    prependIcon: 'mdi-calendar',
-    link: true,
-  },
-  {
-    title: 'Reports',
-    prependIcon: 'mdi-file-chart-outline',
     link: true,
   },
 ])

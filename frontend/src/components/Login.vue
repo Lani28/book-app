@@ -28,7 +28,7 @@ function fnLoginValidation() {
 
 //로그인
 function fnLogin(){
-  axios.post('/api/login', {
+  axios.post('/login/login', {
     email: email.value,
     password: password.value
   }
