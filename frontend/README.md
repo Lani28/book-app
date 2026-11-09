@@ -1,23 +1,34 @@
-# .
 
-This template should help get you started developing with Vue 3 in Vite.
+# My Book App
 
-## Recommended IDE Setup
+개인 도서 관리 서비스 토이 프로젝트
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🛠 개발 환경 및 기술 스택
 
-## Recommended Browser Setup
+### Backend
+| 구분 | 기술 | 버전 |
+|---|---|---|
+| Language | Java | 17 |
+| Framework | Spring Boot | 3.x |
+| ORM / SQL Mapper | MyBatis | x.x |
+| Database | Oracle | x.x |
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+### Frontend
+| 구분 | 기술 | 버전    |
+|---|---|-------|
+| Framework | Vue.js | 3.x   |
+| UI Framework | Vuetify | 4.2.5 |
+| Build Tool | Vite | x.x   |
+| Package Manager | npm | x.x   |
 
-## Customize configuration
+### Development Tools
+| 구분 | 도구 |
+|---|---|
+| IDE | IntelliJ IDEA |
+| IDE | Visual Studio Code |
+| Version Control | Git / GitHub |
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 🚀 프로젝트 실행 방법
 
 ## Project Setup
 
